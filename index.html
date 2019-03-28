@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="generateRandom()">Generate Random</button>
+<br>
+<script>
+function generateRandom() {
+	createEmail()
+	createBanking()
+	createShopping()
+}
+function createEmail() {
+  var div = document.createElement("div");
+  var txt = document.createTextNode("Email");
+  var txtfield = document.createElement("input");
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "Submit";
+  div.appendChild(txt);
+  div.appendChild(txtfield);
+  div.appendChild(btn);
+  document.body.appendChild(div)
+}
+function createBanking() {
+ var div = document.createElement("div");
+var txt = document.createTextNode("Banking");
+  var txtfield = document.createElement("input");
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "Submit";
+   div.appendChild(txt);
+  div.appendChild(txtfield);
+  div.appendChild(btn);
+  document.body.appendChild(div)
+}
+function createShopping() {
+ var div = document.createElement("div");
+  var txt = document.createTextNode("Shopping");
+  var txtfield = document.createElement("input");
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "Submit";
+  div.appendChild(txt);
+  div.appendChild(txtfield);
+  div.appendChild(btn);
+  document.body.appendChild(div)
+}
+</script>
+
+</body>
+</html>
