@@ -6,34 +6,55 @@
 <br>
 <script>
 function generateRandom() {
-	createEmail()
-	createBanking()
-	createShopping()
+	//var arr = [1,2,3];
+	//console.log(shuffle(arr));
+	
+	createEmail();
+	createBanking();
+	createShopping();
+}
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
 }
 function createEmail() {
   var div = document.createElement("div");
   var txt = document.createTextNode("Email");
+  txt.id = "userTextField";
   var txtfield = document.createElement("input");
   var btn = document.createElement("BUTTON");
   btn.innerHTML = "Submit";
   div.appendChild(txt);
   div.appendChild(txtfield);
   div.appendChild(btn);
-  document.body.appendChild(div)
+  document.body.appendChild(div);
+  btn.onclick = verifyEmail()
+  function verifyEmail(){
+    var userText = $('#userTextField').val(); //get text from user text input field
+	//lastUserText = userText;
+	//clear lines of text in textDiv
+	//console.log();
+	}
 }
 function createBanking() {
- var div = document.createElement("div");
-var txt = document.createTextNode("Banking");
+  var div = document.createElement("div");
+  var txt = document.createTextNode("Banking");
   var txtfield = document.createElement("input");
   var btn = document.createElement("BUTTON");
   btn.innerHTML = "Submit";
-   div.appendChild(txt);
+  div.appendChild(txt);
   div.appendChild(txtfield);
   div.appendChild(btn);
-  document.body.appendChild(div)
+  document.body.appendChild(div);
 }
 function createShopping() {
- var div = document.createElement("div");
+  var div = document.createElement("div");
   var txt = document.createTextNode("Shopping");
   var txtfield = document.createElement("input");
   var btn = document.createElement("BUTTON");
@@ -41,7 +62,7 @@ function createShopping() {
   div.appendChild(txt);
   div.appendChild(txtfield);
   div.appendChild(btn);
-  document.body.appendChild(div)
+  document.body.appendChild(div);
 }
 </script>
 

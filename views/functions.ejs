@@ -1,0 +1,79 @@
+<%
+check_if_fail  = function(data) {
+  %>
+    <b>YUUUH</b> <%
+}
+%>
+
+<%
+ populate = function(data) {
+ switch (data.passwords[0]){
+    case 'email' : %>
+      <form id="email-pass" method="POST" action="/index">
+      <b>Email</b>
+      <input type = "text"  name="email_pass" value="" size = "60" />
+      <input type="submit" value="Submit" />
+      </form>
+    <% break;
+    case 'banking' : %>
+      <form id="bank-pass" method="POST" action="/index">
+      <b>Banking</b>
+      <input type = "text"  name="bank_pass" value="" size = "60" />
+      <input type="submit" value="Submit" />
+      </form>
+    <% break;
+    case 'shopping' : %>
+    <form id="shop-pass" method="POST" action="/index">
+    <b>Shopping</b>
+    <input type = "text"  name="shop_pass" value="" size = "60" />
+    <input type="submit" value="Submit" />
+    </form>
+    <% break;
+  }
+  switch (data.passwords[1]){
+      case 'email' : %>
+        <form id="email-pass" method="POST" action="/index">
+        <b>Email</b>
+        <input type = "text"  name="email_pass" value="" size = "60" />
+        <input type="submit" value="Submit" />
+        </form>
+      <% break;
+      case 'banking' : %>
+      <form id="bank-pass" method="POST" action="/index">
+      <b>Banking</b>
+      <input type = "text"  name="bank_pass" value="" size = "60" />
+      <input type="submit" value="Submit" />
+      </form>
+      <% break;
+      case 'shopping' : %>
+      <form id="shop-pass" method="POST" action="/index">
+      <b>Shopping</b>
+      <input type = "text"  name="shop_pass" value="" size = "60" />
+      <input type="submit" value="Submit" />
+      </form>
+      <% break;
+    }
+    switch (data.passwords[2]){
+        case 'email' : %>
+          <form id="email-pass" method="POST" action="/index">
+          <b>Email</b>
+          <input type = "text"  name="email_pass" value="" size = "60" />
+          <input type="submit" value="Submit" />
+          </form>
+        <% break;
+        case 'banking' : %>
+        <form id="bank-pass" method="POST" action="/index">
+        <b>Banking</b>
+        <input type = "text"  name="bank_pass" value="" size = "60" />
+        <input type="submit" value="Submit" />
+        </form>
+        <% break;
+        case 'shopping' : %>
+        <form id="shop-pass" method="POST" action="/index">
+        <b>Shopping</b>
+        <input type = "text"  name="shop_pass" value="" size = "60" />
+        <input type="submit" value="Submit" />
+        </form>
+        <% break;
+      }
+    }%>

@@ -1,0 +1,20 @@
+<% include functions.ejs %>
+<html>
+<body>
+<u1>
+  <form id="gen_pass" method="GET" action="/index">
+  <input type="submit" value="Generate Passwords">
+  </form>
+  <br>
+</u1>
+<br>
+<u1>
+    <%
+    if(data){
+     check_if_fail();
+     populate(data);
+      }%>
+
+</u1>
+</body>
+</html>
